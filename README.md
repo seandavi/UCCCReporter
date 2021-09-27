@@ -1,10 +1,3 @@
----
-title: "UCCCReporter"
-author: "Sean Davis"
-date: "9/27/2021"
-output: html_document
----
-
 # UCCC Reporter
 
 This is a collection of data resources and **internal** utility functions for
