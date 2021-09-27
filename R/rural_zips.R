@@ -5,6 +5,9 @@
 #'
 #' @source \url{https://www.hrsa.gov/rural-health/about-us/definition/datafiles.html}
 #'
+#' @section Download:
+#' - \url{https://github.com/seandavi/UCCCReporter/raw/main/inst/extdata/forhp-eligible-zips.xlsx}
+#'
 #' @section Geographic level:
 #'
 #' - zipcode

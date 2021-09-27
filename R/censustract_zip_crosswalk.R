@@ -9,6 +9,9 @@
 #' - zipcode
 #' - census tract
 #'
+#' @section Download:
+#' - \url{https://github.com/seandavi/UCCCReporter/raw/main/inst/extdata/ZIP_TRACT_062021.xlsx}
+#'
 #' @family Data resources
 #'
 #' @examples

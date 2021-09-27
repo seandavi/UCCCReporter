@@ -13,6 +13,13 @@ rural_zips()
 Data are stored at extdata/forhp-eligible-zips.xlsx for convenience.
 They were accesses on September 25, 2021.
 }
+\section{Download}{
+
+\itemize{
+\item \url{https://github.com/seandavi/UCCCReporter/raw/main/inst/extdata/forhp-eligible-zips.xlsx}
+}
+}
+
 \section{Geographic level}{
 
 \itemize{

@@ -21,6 +21,13 @@ They were accesses on September 25, 2021.
 }
 }
 
+\section{Download}{
+
+\itemize{
+\item \url{https://github.com/seandavi/UCCCReporter/raw/main/inst/extdata/ZIP_TRACT_062021.xlsx}
+}
+}
+
 \examples{
 ctract_zip = census_tract_zip_crosswalk()
 
