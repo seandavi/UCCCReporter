@@ -1,7 +1,10 @@
 #' data.table of rural zipcodes from HRSA
 #'
-#' Data are stored at extdata/forhp-eligible-zips.xlsx for convenience.
-#' They were accesses on September 25, 2021.
+#' These data were compiled by Federal Office of Rural Health Policy (FORHP)
+#' at the Health Resources and Services Administration (HRSA). This data
+#' resources gives a simple list of zipcodes that are considered _rural_.
+#'
+#' They were accessed on September 25, 2021.
 #'
 #' @source \url{https://www.hrsa.gov/rural-health/about-us/definition/datafiles.html}
 #'

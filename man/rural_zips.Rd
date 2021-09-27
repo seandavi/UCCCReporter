@@ -10,8 +10,12 @@
 rural_zips()
 }
 \description{
-Data are stored at extdata/forhp-eligible-zips.xlsx for convenience.
-They were accesses on September 25, 2021.
+These data were compiled by Federal Office of Rural Health Policy (FORHP)
+at the Health Resources and Services Administration (HRSA). This data
+resources gives a simple list of zipcodes that are considered \emph{rural}.
+}
+\details{
+They were accessed on September 25, 2021.
 }
 \section{Download}{
 
