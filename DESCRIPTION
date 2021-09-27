@@ -1,0 +1,17 @@
+Package: UCCCReporter
+Type: Package
+Title: Utilities for University of Colorado Cancer Center reporting
+Version: 0.1.0
+Authors@R: person(given='Sean',family='Davis',email='seandavi@gmail.com',role=c("aut","cre"))
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT
+Imports: tigris,
+    data.table,
+    bigrquery,
+    tmap,
+    readxl
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

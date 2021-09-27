@@ -1,0 +1,20 @@
+template:
+  params:
+    bootswatch: cerulean
+reference:
+- title: "Data resource accessors"
+  desc: >
+    Data for understanding the Cancer Center catchment and populations
+    are included in the package.
+- contents:
+  - has_concept('Data resources')
+- title: "Collecting historical clinical data [internal use only]"
+  desc: >
+    These functions are **private** and will require a Google Cloud
+    key file for access. They are unimportant to anyone without Health Data
+    Compass access to these specific datasets.
+- contents:
+  - get_patient_report
+  - set_gcs_auth_file
+  - get_google_auth_file
+
