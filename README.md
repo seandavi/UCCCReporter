@@ -9,3 +9,12 @@ dashboard efforts.
 
 For a current list of data resources and their descriptions, and provenance, see [here](reference/index.html#section-data-resource-accessors).
 
+# Usage
+
+In R:
+
+``` r
+install.packages('remotes')
+remotes::install_github('seandavi/UCCCReporter')
+library(UCCCReporter)
+```
