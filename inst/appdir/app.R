@@ -2,6 +2,7 @@ library(shiny)
 library(bslib)
 library(ggplot2)
 library(gt)
+library(data.table)
 
 .datatable.aware = TRUE
 records = get_patient_report() |> relationalize_patient_reports()
@@ -31,7 +32,8 @@ ui <- navbarPage(
             #                min=min(records$FirstCancerCenterVisit_Date),
             #                max=max(records$FirstCancerCenterVisit_Date),
             #                format = "mm/dd/yy")
-            selectizeInput('clinic','clinic',choices=unique_clinics)
+            selectizeInput('clinic','clinic',choices=unique_clinics),
+            width=3
         ),
 
         # Show a plot of the generated distribution

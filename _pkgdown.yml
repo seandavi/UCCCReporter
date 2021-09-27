@@ -1,6 +1,7 @@
 template:
   params:
     bootswatch: cerulean
+    ganalytics: G-6LHPEEPDF3
 reference:
 - title: "Data resource accessors"
   desc: >
