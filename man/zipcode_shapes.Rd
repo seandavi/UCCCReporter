@@ -44,6 +44,7 @@ tmap::tm_shape(zipshapes) +
 }
 \seealso{
 Other Data resources: 
+\code{\link{cdc_places}()},
 \code{\link{census_tract_zip_crosswalk}()},
 \code{\link{rural_zips}()}
 }
