@@ -49,10 +49,11 @@ ui <- navbarPage(
 server <- function(input, output) {
 
     dat = reactive({
-        recs = records$patient_details
-        recs = merge(recs,records$patient_clinics)
-        setkey(recs,"arb_person_id","RN")
-        recs = merge(recs,records$patient_first_visits)
+        recs = records$patient_details |>
+            merge(records$patient_clinics) |>
+            setkey("arb_person_id","RN") |>
+            merge(records$patient_first_visits) |>
+            merge(records$patient_trials)
         recs = recs[Clinic_Identifier==input$clinic,]
         recs[,rural:=PostalCode %in% rural_zip_data$zip_code]
         recs

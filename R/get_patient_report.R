@@ -33,17 +33,32 @@ get_patient_report <- function(use_cache=TRUE) {
     records
 }
 
+.bar_split <- function(to_split) {
+    strsplit(to_split,' \\| ')
+}
+
+
+
+.datatable.aware=TRUE
 relationalize_patient_reports <- function(records) {
     patient_details <- unique(records[,c("arb_person_id","GenderIdentity","SexAssignedAtBirth",
                            "SexualOrientation","Race","Ethnicity","PostalCode")])
     patient_first_visits <- records[,c("arb_person_id","RN","FirstCancerCenterVisit_Date",
                                       "Age_At_FirstVisit","PayorName_AtFirstTimeOfVisit")]
+
+    patient_clinics <- records[,c("arb_person_id","RN","Clinic_Identifier")]
+    data.table::setDT(patient_clinics)
+    patient_clinics <- patient_clinics[
+        ,lapply(.SD,.bar_split)
+        ,by=.(arb_person_id,RN)
+        ,.SDcols=c("Clinic_Identifier")]
+    patient_clinics <- patient_clinics[
+            ,lapply(.SD,unlist,recursive=FALSE),by=.(arb_person_id,RN)]
+
     patient_diagnoses <- records[,c("arb_person_id","RN","ICDCodeType","ICDCode","ICDDescription")][
-        ,lapply(.SD,function(x) strsplit(x,' \\| ')),by=.(arb_person_id,RN),.SDcols=c('ICDCode','ICDDescription','ICDCodeType')][
+        ,lapply(.SD,.bar_split),by=.(arb_person_id,RN),.SDcols=c('ICDCode','ICDDescription','ICDCodeType')][
             ,lapply(.SD,unlist,recursive=FALSE),by=.(arb_person_id,RN)]
-    patient_clinics <- records[,c("arb_person_id","RN","Clinic_Identifier")][
-        ,lapply(.SD,function(x) strsplit(x,' \\| ')),by=.(arb_person_id,RN),.SDcols=c("Clinic_Identifier")][
-            ,lapply(.SD,unlist,recursive=FALSE),by=.(arb_person_id,RN)]
+
     patient_trials <- records[,c("arb_person_id","RN","Protocol")][
         ,lapply(.SD,function(x) strsplit(x,' \\| ')),by=.(arb_person_id,RN),.SDcols=c("Protocol")][
             ,lapply(.SD,unlist,recursive=FALSE),by=.(arb_person_id,RN)]

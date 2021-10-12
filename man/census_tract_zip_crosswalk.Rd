@@ -37,6 +37,7 @@ head(ctract_zip)
 \seealso{
 Other Data resources: 
 \code{\link{cdc_places}()},
+\code{\link{cdc_social_vulnerability_index}()},
 \code{\link{rural_zips}()},
 \code{\link{zipcode_shapes}()}
 }
