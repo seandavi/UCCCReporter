@@ -24,7 +24,7 @@ They were accesses on September 25, 2021.
 \section{Download}{
 
 \itemize{
-\item \url{https://github.com/seandavi/UCCCReporter/raw/main/inst/extdata/ZIP_TRACT_062021.xlsx}
+\item \url{https://github.com/seandavi/UCCCReporter/raw/main/inst/extdata/TRACT_ZIP_092021.csv.gz}
 }
 }
 

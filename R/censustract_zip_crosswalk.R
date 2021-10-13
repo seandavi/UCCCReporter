@@ -10,7 +10,7 @@
 #' - census tract
 #'
 #' @section Download:
-#' - \url{https://github.com/seandavi/UCCCReporter/raw/main/inst/extdata/ZIP_TRACT_062021.xlsx}
+#' - \url{https://github.com/seandavi/UCCCReporter/raw/main/inst/extdata/TRACT_ZIP_092021.csv.gz}
 #'
 #' @family Data resources
 #'
@@ -21,9 +21,10 @@
 #'
 #' @export
 census_tract_zip_crosswalk <- function() {
-    tf = system.file(package='UCCCReporter','extdata/ZIP_TRACT_062021.xlsx')
-    df <- readxl::read_excel(tf)
-    data.table::setDT(df)
+    tf = system.file(package='UCCCReporter','extdata/TRACT_ZIP_092021.csv.gz')
+    # column names are capitalized
+    # Read zip at character to keep leading zeros
+    df <- data.table::fread(tf,colClasses = c(ZIP="character"))
     data.table::setnames(df,old = tolower)
     df
 }
