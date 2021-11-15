@@ -29,6 +29,8 @@
 #'
 #' table(cl_ancestry$ethnicity)
 #'
+#' anc_mat = as.matrix(cl_ancestry[,12:18])
+#' heatmap(anc_mat,margins = c(9,1), labRow=NA)
 #'
 #' @export
 cell_line_ancestry <- function() {
