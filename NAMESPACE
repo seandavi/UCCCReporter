@@ -2,6 +2,7 @@
 
 export(cdc_places)
 export(cdc_social_vulnerability_index)
+export(cell_line_ancestry)
 export(census_tract_zip_crosswalk)
 export(get_google_auth_file)
 export(get_patient_report)

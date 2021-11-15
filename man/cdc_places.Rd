@@ -52,6 +52,7 @@ unique(places$Measure)
 \seealso{
 Other Data resources: 
 \code{\link{cdc_social_vulnerability_index}()},
+\code{\link{cell_line_ancestry}()},
 \code{\link{census_tract_zip_crosswalk}()},
 \code{\link{rural_zips}()},
 \code{\link{zipcode_shapes}()}

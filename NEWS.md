@@ -1,3 +1,7 @@
+# UCCCReporter 0.1.4
+
+* Added new cancer cell line ancestry resource.
+
 # UCCCReporter 0.1.3
 
 * Fixed the `census_tract_zip_crosswalk()` resource to allow mapping from tract
