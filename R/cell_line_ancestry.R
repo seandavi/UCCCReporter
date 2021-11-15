@@ -21,6 +21,15 @@
 #'
 #' head(cl_ancestry)
 #'
+#' # Source of cell line
+#' table(cl_ancestry$source)
+#'
+#' # cell lines in CCLE?
+#' table(cl_ancestry$ccle_membership)
+#'
+#' table(cl_ancestry$ethnicity)
+#'
+#'
 #' @export
 cell_line_ancestry <- function() {
     tf = system.file(package='UCCCReporter','extdata/cancer-cell-lines-ancestry.csv.gz')

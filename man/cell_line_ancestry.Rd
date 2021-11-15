@@ -25,6 +25,15 @@ cl_ancestry = cell_line_ancestry()
 
 head(cl_ancestry)
 
+# Source of cell line
+table(cl_ancestry$source)
+
+# cell lines in CCLE?
+table(cl_ancestry$ccle_membership)
+
+table(cl_ancestry$ethnicity)
+
+
 }
 \references{
 Dutil J, Chen Z, Monteiro AN, Teer JK, Eschrich SA. An Interactive Resource to Probe Genetic Diversity and Estimated Ancestry in Cancer Cell Lines. Cancer Res. 2019 Apr 1;79(7):1263-1273. doi: 10.1158/0008-5472.CAN-18-2747. Epub 2019 Mar 20. PMID: 30894373; PMCID: PMC6445675.
